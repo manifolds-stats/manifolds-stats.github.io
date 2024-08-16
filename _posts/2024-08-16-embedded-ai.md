@@ -2,7 +2,7 @@
 title: Embedded AI
 description: Introduction to embedded ai
 author: longyuan
-date: 2024-08-16 17:22:00 +0800
+date: 2024-08-16 17:8:00 +0800
 categories: [Blogging, Notes, AI, Robotics]
 tags: [notes]
 pin: true
