@@ -34,7 +34,7 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 ---
 
 ## 中文
-> 夜静海涛三万里，月明飞锡下天风  
+> 夜静海涛三万里，月明飞锡下天风。  
 > --- 王阳明
 
 你好，我是龙渊，一位统计学大一萌新。
