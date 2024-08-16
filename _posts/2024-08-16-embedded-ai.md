@@ -10,7 +10,6 @@ math: true
 mermaid: true
 image:
   path: /assets/robotics.png
-  alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
 
@@ -22,7 +21,7 @@ image:
 ### 具身智能概念
 
 具身感知，具身交互感知，具身执行，具身智能与通用人工智能
-1950 年，图灵在他的论文 ——《Computing Machinery and Intelligence》[1] 中首次提出了具身智能的概念。
+1950 年，图灵在他的论文 ——《Computing Machinery and Intelligence》 中首次提出了具身智能的概念。
 
 
 
@@ -53,6 +52,8 @@ image:
    - 代理被定义为能够感知其环境并采取行动实现特定目标的自主具身。MLM的最新进展进一步将代理的应用扩展到实际场景。当这些基于MLM的代理体现在物理具身中时，它们可以有效地将其能力从虚拟空间转移到物理世界，从而成为体现代理。
 6. **Sim-to-Real适应**
    - 具身人工智能中的模拟到真实适应是指将在模拟环境（网络空间）中学习到的能力或行为转移到现实世界场景（物理世界）的过程。它涉及验证和改进仿真中开发的算法、模型和控制策略的有效性，以确保它们在物理环境中稳健可靠地运行。
+
+参考：具身智能之心
 
 ## Demo from Tesla
 
