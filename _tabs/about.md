@@ -24,7 +24,6 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 🌐 **Online Presence:**
 
 * [GitHub](https://github.com/manifolds-stats)
-* [Zhihu](https://www.zhihu.com/people/wei-xin-yong-hu-11-19-80-25)
 
 📧 **Contact information:**
 
@@ -53,7 +52,6 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 🌐 **互联网踪迹：**
 
 * [GitHub](https://github.com/manifolds-stats)
-* [Zhihu](https://www.zhihu.com/people/wei-xin-yong-hu-11-19-80-25)
 
 📧 **联系方式：**
 
