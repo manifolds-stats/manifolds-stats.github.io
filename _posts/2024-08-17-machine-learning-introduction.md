@@ -57,6 +57,6 @@ image:
 
 按照数据是否有标签 (label)，我们可以大致将机器学习问题分为**监督学习** (Supervised Learning)、**无监督学习** (Unsupervised Learning)，在后续的学习中我们还会遇到将两种学习方法相结合的半监督学习，以及**强化学习** (Deep Reinforcement Learning)。我们将首先将目光放在以下几类问题上。如下图所示
 
-![alt text](image.png)
+![alt text]([image.png](https://github.com/manifolds-stats/manifolds-stats.github.io/blob/main/_posts/image.png?raw=true))
 
 **Referance**：Mathematics For Machine Learning
