@@ -3,8 +3,8 @@ title: Embedded AI
 description: Introduction to embedded ai
 author: longyuan
 date: 2024-08-16 17:8:00 +0800
-categories: [Blogging, Notes, AI, Robotics]
-tags: [notes]
+categories: [Artificial Intelligence, Robotics]
+tags: [embedded AI]
 pin: true
 math: true
 mermaid: true
@@ -20,10 +20,7 @@ image:
 
 ### 具身智能概念
 
-具身感知，具身交互感知，具身执行，具身智能与通用人工智能
-1950 年，图灵在他的论文 ——《Computing Machinery and Intelligence》 中首次提出了具身智能的概念。
-
-
+具身智能是指智能体（包括具有实体的机器人等），通过与环境产生交互以及自身的学习，可以具备像人一样能与环境交互感知，自主规划、决策、行动以及执行的能力。
 
 ### 具身智能与AI
 
