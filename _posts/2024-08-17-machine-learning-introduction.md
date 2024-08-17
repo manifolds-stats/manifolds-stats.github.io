@@ -3,8 +3,8 @@ title: Introduction to Machine Learning
 description: Introduction to machine learning
 author: longyuan
 date: 2024-08-17 
-categories: [Artificial Intelligence, Robotics]
-tags: [embedded AI]
+categories: [Artificial Intelligence, Machine Learning]
+tags: [machine learning]
 pin: true
 math: true
 mermaid: true
