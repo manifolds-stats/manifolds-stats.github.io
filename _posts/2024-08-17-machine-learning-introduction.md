@@ -9,7 +9,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/mml.jpg
+  path: /assets/ml.jpg
 ---
 
 # 机器学习导论
