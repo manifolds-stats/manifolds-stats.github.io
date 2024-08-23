@@ -49,7 +49,7 @@ image:
 - 调整模型参数以优化目标函数的算法 (algorithm) 
 {: .prompt-tip }
 
-按照数据是否有标签 (label)，我们可以大致将机器学习问题分为**监督学习** (Supervised Learning)、**无监督学习** (Unsupervised Learning)，在后续的学习中我们还会遇到将两种学习方法相结合的半监督学习，以及**强化学习** (Deep Reinforcement Learning)。我们将首先将目光放在以下几类问题上。如下图所示
+按照数据是否有标签 (label)，我们可以大致将机器学习问题分为**监督学习** (Supervised Learning)、**无监督学习** (Unsupervised Learning)，在后续的学习中我们还会遇到将两种学习方法相结合的半监督学习，以及**强化学习** (Reinforcement Learning)。我们将首先将目光放在以下几类问题上。如下图所示
 
 ![image](https://github.com/user-attachments/assets/9aa5eaa5-3f68-43a7-9648-a506cc9d5c4e)
 
