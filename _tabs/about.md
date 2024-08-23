@@ -56,6 +56,4 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 
 * Email: [longyuannew@163.com]
 
-## Music
 
-<audio src="https://c6.y.qq.com/base/fcgi-bin/u?__=kzxQ3o5E0wZg"></audio>
