@@ -58,4 +58,4 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 
 ## Music
 
-{% include embed/y.qq.html id='kzxQ3o5E0wZg' %}
+<audio src="https://c6.y.qq.com/base/fcgi-bin/u?__=kzxQ3o5E0wZg"></audio>
