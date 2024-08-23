@@ -51,8 +51,8 @@ image:
    - 具身人工智能中的模拟到真实适应是指将在模拟环境（网络空间）中学习到的能力或行为转移到现实世界场景（物理世界）的过程。它涉及验证和改进仿真中开发的算法、模型和控制策略的有效性，以确保它们在物理环境中稳健可靠地运行。
 
 Reference：
-* 1. Liu, Yang, et al. "Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI." arXiv preprint arXiv:2407.06886 (2024).
-* 2. @具身智能之心
+* Liu, Yang, et al. "Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI." arXiv preprint arXiv:2407.06886 (2024).
+* @具身智能之心
           
   
           
