@@ -44,24 +44,27 @@ $$
 一般地，机器学习的目标，就是从模型簇中寻找最佳的参数，使得模型的效果最好。而学习过程，便是在可行域即参数空间中搜索参数的优化问题（optimization）。为了达到这一目标，我们首先要明确如何衡量一个模型的优劣，这便是本节的核心，模型评估问题。
 
 对于决策模型，我们需要度量模型预测值与真实值之间的差异，为此，我们在实数域上引入度量 $d$，满足正定性、对称性和三角形不等式。而模型的优劣，可以用损失函数 $L$ 表示：
+
 $$
 L = \frac{1}{m} \sum_{i=1}^{m} d(y_i, \hat{y}_i)
 $$
+
 其中 $\hat{y}_i = f(\boldsymbol{x}_i, \boldsymbol{\theta})$，对于连续情形，
+
 $$
 L = \int d(y, \hat{y}) p(\boldsymbol{x}) \, \text{d}\boldsymbol{x}
 $$
+
 其中 $\hat{y} = f(\boldsymbol{x}, \boldsymbol{\theta})$。总的概括为：
 
 >
-
 $$
 L = \mathbb{E}_{\boldsymbol{x} \in \mathcal{D}} [d(y, \hat{y})]
 $$
-
 {: .prompt-tip }
 
 而我们的模型评估及选择，就是为了最小化损失函数。因此，我们的机器学习问题便转化成了如何用合适而高效的算法来学习，达到最小化损失函数的优化问题，即：
+
 $$
 \text{argmin}_{\boldsymbol{\theta} \in \Theta} L(f, \mathcal{X}, \mathcal{Y})
 $$
@@ -69,11 +72,9 @@ $$
 用矩阵的语言表述，令 $\boldsymbol{X} := (\boldsymbol{x_1}, \boldsymbol{x_2}, \ldots, \boldsymbol{x_m})^T$，$\boldsymbol{y} := (y_1, y_2, \ldots, y_m)^T$，则有：
 
 >
-
 $$
 \text{argmin}_{\boldsymbol{\theta} \in \Theta} L(f, \boldsymbol{X}, \boldsymbol{y})
 $$
-
 {: .prompt-tip }
 
 
