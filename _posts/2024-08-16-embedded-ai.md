@@ -1,10 +1,10 @@
 ---
-title: Embedded AI
-description: Introduction to embedded ai
+title: Embodied AI
+description: Introduction to embodied ai
 author: longyuan
 date: 2024-08-16 17:8:00 +0800
 categories: [Artificial Intelligence, Robotics]
-tags: [embedded AI]
+tags: [embodied AI]
 pin: true
 math: true
 mermaid: true
@@ -24,7 +24,7 @@ image:
 
 ### 具身智能与AI
 
-具身智能（Embedded AI）对于实现通用人工智能（AGI）至关重要，是连接网络空间和物理世界的各种应用的基础。最近，多模态大模型（MLM）和世界模型（WMs）的出现因其卓越的感知、交互和推理能力而引起了人们的广泛关注，使其成为具身智能体大脑的一种有前景的架构。
+具身智能（Embodied AI）对于实现通用人工智能（AGI）至关重要，是连接网络空间和物理世界的各种应用的基础。最近，多模态大模型（MLM）和世界模型（WMs）的出现因其卓越的感知、交互和推理能力而引起了人们的广泛关注，使其成为具身智能体大脑的一种有前景的架构。
 
 
 
@@ -50,7 +50,8 @@ image:
 6. **Sim-to-Real适应**
    - 具身人工智能中的模拟到真实适应是指将在模拟环境（网络空间）中学习到的能力或行为转移到现实世界场景（物理世界）的过程。它涉及验证和改进仿真中开发的算法、模型和控制策略的有效性，以确保它们在物理环境中稳健可靠地运行。
 
-参考：具身智能之心
+Reference：Liu, Yang, et al. "Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI." arXiv preprint arXiv:2407.06886 (2024).
+
 
 ## Demo from Tesla
 
