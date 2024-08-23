@@ -19,7 +19,7 @@ image:
 
 前一节中我们已经明确了机器学习中的核心概念：**数据** (data)、**模型** (model) 和 **学习** (learning)，接下来我们明确一下它们的数学表示，以便我们用更为严谨的数学语言展开接下来的讨论。
 
-一般地，数据用向量 $\boldsymbol{x}$ 表示，样本 (example) 用 $(\boldsymbol{x}, y)$ 表示，其中 $y$ 为标签 (label)，可能未知。数据集 (dataset) 用 $D = \{(\boldsymbol{x_1}, y_1), (\boldsymbol{x_2}, y_2), \ldots, (\boldsymbol{x_m}, y_m)\}$ 表示，每个数据含 $d$ 个特征 (feature)，用 $\boldsymbol{x_i} = (x^1_i, x^2_i, \ldots, x^d_i)$ 表示，$d$ 称为数据的维数 (dimensionality)。模型通常用一个映射来表示，记为：
+一般地，数据用向量 $\boldsymbol{x}$ 表示，样本 (example) 用 $(\boldsymbol{x}, y)$ 表示，其中 $y$ 为标签 (label)，可能未知。数据集 (dataset) 用 $D = ${$(\boldsymbol{x_1}, y_1), (\boldsymbol{x_2}, y_2), \ldots, (\boldsymbol{x_m}, y_m)$}表示，每个数据含 $d$ 个特征 (feature)，用 $\boldsymbol{x_i} = (x^1_i, x^2_i, \ldots, x^d_i)$ 表示，$d$ 称为数据的维数 (dimensionality)。模型通常用一个映射来表示，记为：
 
 $$
 f: \mathcal{X} \to \mathcal{Y}
@@ -41,9 +41,9 @@ $$
 
 ### 模型评估
 
-对于决策模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列映射，这些映射构成一个函数簇 $\mathscr{F} = \{f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta\}$，$\Theta$ 为参数空间。
+对于决策模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列映射，这些映射构成一个函数簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间。
 
-对于概率模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列分布，这些分布构成一个分布簇 $\mathscr{F} = \{f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta\}$，$\Theta$ 为参数空间，$f(\boldsymbol{x}, \boldsymbol{\theta})$ 为概率函数。
+对于概率模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列分布，这些分布构成一个分布簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间，$f(\boldsymbol{x}, \boldsymbol{\theta})$ 为概率函数。
 
 一般地，机器学习的目标，就是从模型簇中寻找最佳的参数，使得模型的效果最好。而学习过程，便是在可行域即参数空间中搜索参数的优化问题（optimization）。为了达到这一目标，我们首先要明确如何衡量一个模型的优劣，这便是本节的核心，模型评估问题。
 
