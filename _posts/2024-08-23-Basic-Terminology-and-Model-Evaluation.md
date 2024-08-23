@@ -11,52 +11,77 @@ mermaid: true
 image:
   path: /assets/ml.jpg
 
+
 ---
 
-# 基本术语与模型评估
+## 基本术语与模型评估
 
-## 基本术语  
+### 基本术语
 
-前一节中我们已经明确了机器学习中的核心概念：**数据** (data) 、**模型** (model) 和**学习** (learning) ，接下来我们明确一下它们的数学表示，以便我们用更为严谨的数学语言展开接下来的讨论。\alpha
+前一节中我们已经明确了机器学习中的核心概念：**数据** (data)、**模型** (model) 和 **学习** (learning)，接下来我们明确一下它们的数学表示，以便我们用更为严谨的数学语言展开接下来的讨论。
+
+一般地，数据用向量 $\boldsymbol{x}$ 表示，样本 (example) 用 $(\boldsymbol{x}, y)$ 表示，其中 $y$ 为标签 (label)，可能未知。数据集 (dataset) 用 $D = \{(\boldsymbol{x_1}, y_1), (\boldsymbol{x_2}, y_2), \ldots, (\boldsymbol{x_m}, y_m)\}$ 表示，每个数据含 $d$ 个特征 (feature)，用 $\boldsymbol{x_i} = (x^1_i, x^2_i, \ldots, x^d_i)$ 表示，$d$ 称为数据的维数 (dimensionality)。模型通常用一个映射来表示，记为：
+$$
+f: \mathcal{X} \to \mathcal{Y}
+$$
+
+$$
+\boldsymbol{x} \mapsto y
+$$
+
+模型可以分为决策模型和概率模型，它们都依赖于相应的参数 $\boldsymbol{\theta}$。决策模型可以表示为：
+$$
+f(\boldsymbol{x}) = f(\boldsymbol{x}, \boldsymbol{\theta})
+$$
+对于非参数模型，我们通常可以用一个概率分布来描述数据集中样本的分布情况。所以，我们的论述将基于数理统计学中的参数统计推断和非参数统计推断方法。
+
+一般地，我们讨论的数据集通常取值为实数，为了刻画数据的分布或者相似程度，我们需要引入度量，所以我们一般在度量空间中讨论问题，如果该度量存在对应的范数，该度量空间便成为一个（实）赋范空间。
+
+### 模型评估
+
+对于决策模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列映射，这些映射构成一个函数簇 $\mathscr{F} = \{f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta\}$，$\Theta$ 为参数空间。
+
+对于概率模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列分布，这些分布构成一个分布簇 $\mathscr{F} = \{f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta\}$，$\Theta$ 为参数空间，$f(\boldsymbol{x}, \boldsymbol{\theta})$ 为概率函数。
+
+一般地，机器学习的目标，就是从模型簇中寻找最佳的参数，使得模型的效果最好。而学习过程，便是在可行域即参数空间中搜索参数的优化问题（optimization）。为了达到这一目标，我们首先要明确如何衡量一个模型的优劣，这便是本节的核心，模型评估问题。
+
+对于决策模型，我们需要度量模型预测值与真实值之间的差异，为此，我们在实数域上引入度量 $d$，满足正定性、对称性和三角形不等式。而模型的优劣，可以用损失函数 $L$ 表示：
+$$
+L = \frac{1}{m} \sum_{i=1}^{m} d(y_i, \hat{y}_i)
+$$
+其中 $\hat{y}_i = f(\boldsymbol{x}_i, \boldsymbol{\theta})$，对于连续情形，
+$$
+L = \int d(y, \hat{y}) p(\boldsymbol{x}) \, \text{d}\boldsymbol{x}
+$$
+其中 $\hat{y} = f(\boldsymbol{x}, \boldsymbol{\theta})$。总的概括为：
 
 >
 
-- **data**：数据，用向量$\alpha$表示
-- **model**：模型，通过统计学或优化理论获得
-- **learning**：学习，通过优化理论学习模型参数 
-  {: .prompt-tip }
+$$
+L = \mathbb{E}_{\boldsymbol{x} \in \mathcal{D}} [d(y, \hat{y})]
+$$
 
-在获得训练数据时，我们通常需要区分训练集 (training set) 和测试集 (testing set)，训练集是用于训练或拟合模型，获得模型参数，测试集是用于评估模型泛化能力。二者之间不能有交集，避免数据泄露问题。
+{: .prompt-tip }
 
-## 机器学习流程
+而我们的模型评估及选择，就是为了最小化损失函数。因此，我们的机器学习问题便转化成了如何用合适而高效的算法来学习，达到最小化损失函数的优化问题，即：
+$$
+\text{argmin}_{\boldsymbol{\theta} \in \Theta} L(f, \mathcal{X}, \mathcal{Y})
+$$
 
-机器学习的流程因具体问题而确定，但大致可以归纳为如下框架：
-
-- **数据预处理**：对数据进行清洗、转换和特征提取，转换为合适的数据类型，以便于后续的模型训练。
-- **定义模型**：根据问题的性质选择合适的机器学习模型，例如线性回归、logistic 回归、softmax 回归、决策树、支持向量机、神经网络等。
-- **初始化模型参数**：根据问题的性质合理设置初始化参数，可以采取随机数或基于经验或已有模型。
-- **定义损失函数**：为模型训练参数提供方向，常用的损失函数有平方损失函数、交叉熵损失函数。
-- **定义优化算法**：常用的优化算法有 LMS、LWR 等。
-- **模型训练**：使用训练集中的数据对模型进行训练，使其能够从数据中学习到相关的模式和规律。
-- **模型预测**：使用独立于训练数据的测试集中的数据来评估模型的泛化性。
-
-## 机器学习分类
-
-首先基于上面的描述，总结一些机器学习中的关键组件，无论什么类型的机器学习问题，都会遇到这些组件：
+用矩阵的语言表述，令 $\boldsymbol{X} := (\boldsymbol{x_1}, \boldsymbol{x_2}, \ldots, \boldsymbol{x_m})^T$，$\boldsymbol{y} := (y_1, y_2, \ldots, y_m)^T$，则有：
 
 >
 
-- 可以用来学习的数据 (data)
-- 如何转换数据的模型 (model)
-- 一个目标函数 (objective function)，用来量化模型的有效性
-- 调整模型参数以优化目标函数的算法 (algorithm) 
-  {: .prompt-tip }
+$$
+\text{argmin}_{\boldsymbol{\theta} \in \Theta} L(f, \boldsymbol{X}, \boldsymbol{y})
+$$
 
-按照数据是否有标签 (label)，我们可以大致将机器学习问题分为**监督学习** (Supervised Learning)、**无监督学习** (Unsupervised Learning)，在后续的学习中我们还会遇到将两种学习方法相结合的半监督学习，以及**强化学习** (Deep Reinforcement Learning)。我们将首先将目光放在以下几类问题上。如下图所示
+{: .prompt-tip }
 
-![image](https://github.com/user-attachments/assets/9aa5eaa5-3f68-43a7-9648-a506cc9d5c4e)
+
 
 
 **Reference**
 
 * Mathematics For Machine Learning
+* 机器学习 周志华
