@@ -54,4 +54,5 @@ image:
 ![image](https://github.com/user-attachments/assets/9aa5eaa5-3f68-43a7-9648-a506cc9d5c4e)
 
 
-**Referance**：Mathematics For Machine Learning
+**Reference**
+* Mathematics For Machine Learning
