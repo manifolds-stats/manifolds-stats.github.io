@@ -41,11 +41,11 @@ $$
 
 ### 模型评估
 
-对于决策模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列映射，这些映射构成一个函数簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间。
+对于决策模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列映射，这些映射构成一个函数簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间。决策模型的预测问题一般是通过优化（数学规划）方法来获得点估计（point estimator）。
 
-对于概率模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列分布，这些分布构成一个分布簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间，$f(\boldsymbol{x}, \boldsymbol{\theta})$ 为概率函数。
+对于概率模型，随着模型参数 $\boldsymbol{\theta}$ 变化，会产生一系列分布，这些分布构成一个分布簇 $\mathscr{F} = ${$f(\boldsymbol{x}, \boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta$}，$\Theta$ 为参数空间，$f(\boldsymbol{x}, \boldsymbol{\theta})$ 为概率函数。概率模型的推断问题可以采取点估计，也可以采取贝叶斯推断。
 
-一般地，机器学习的目标，就是从模型簇中寻找最佳的参数，使得模型的效果最好。而学习过程，便是在可行域即参数空间中搜索参数的优化问题（optimization）。为了达到这一目标，我们首先要明确如何衡量一个模型的优劣，这便是本节的核心，模型评估问题。
+一般地，机器学习的目标，就是从模型簇中寻找最佳的参数，使得模型的效果最好。而学习过程，便是在可行域即参数空间中搜索参数的优化（数学规划）问题。为了达到这一目标，我们首先要明确如何衡量一个模型的优劣，这便是本节的核心，模型评估问题。
 
 对于决策模型，我们需要度量模型预测值与真实值之间的差异，为此，我们在实数域上引入度量 $d$，满足正定性、对称性和三角形不等式。而模型的优劣，可以用损失函数 $L$ 表示：
 
