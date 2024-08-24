@@ -19,7 +19,7 @@ image:
 
 前一节中我们已经明确了机器学习中的核心概念：**数据** (data)、**模型** (model) 和 **学习** (learning)，接下来我们明确一下它们的数学表示，以便我们用更为严谨的数学语言展开接下来的讨论。
 
-一般地，数据用向量 $\boldsymbol{x}$ 表示，样本 (example) 用 $(\boldsymbol{x}, y)$ 表示，其中 $y$ 为标签 (label)，可能未知。数据集 (dataset) 用 $D = ${$(\boldsymbol{x_1}, y_1), (\boldsymbol{x_2}, y_2), \ldots, (\boldsymbol{x_m}, y_m)$}表示，每个数据含 $d$ 个特征 (feature)，用 $\boldsymbol{x_i} = (x^1_i, x^2_i, \ldots, x^d_i)$ 表示，$d$ 称为数据的维数 (dimensionality)。模型通常用一个映射来表示，记为：
+一般地，数据用向量 $\boldsymbol{x}$ 表示，样本 (example) 用 $(\boldsymbol{x}, y)$ 表示，其中 $y$ 为标签 (label)，可能未知。数据集 (dataset) 用 $D = ${$(\boldsymbol{x_1}, y_1), (\boldsymbol{x_2}, y_2), \ldots, (\boldsymbol{x_m}, y_m)$}表示，每个数据含 $d$ 个特征 (feature)，用 $\boldsymbol{x_i} = (x^1_i, x^2_i, \ldots, x^d_i)$ 表示，$d$ 称为数据的维数 (dimensionality)。模型可以分为决策模型和概率模型，它们都依赖于相应的参数 $\boldsymbol{\theta}$。决策模型通常用一个映射来表示，记为：
 
 $$
 f: \mathcal{X} \to \mathcal{Y}
@@ -29,13 +29,13 @@ $$
 \boldsymbol{x} \mapsto y
 $$
 
-模型可以分为决策模型和概率模型，它们都依赖于相应的参数 $\boldsymbol{\theta}$。决策模型可以表示为：
+引入参数后，决策模型可以表示为：
 
 $$
 f(\boldsymbol{x}) = f(\boldsymbol{x}, \boldsymbol{\theta})
 $$
 
-对于非参数模型，我们通常可以用一个概率分布来描述数据集中样本的分布情况。所以，我们的论述将基于数理统计学中的参数统计推断和非参数统计推断方法。
+对于概率模型，我们通常可以用一个概率分布来描述数据集中样本的分布情况。所以，我们的论述将基于数理统计学中的参数统计推断和非参数统计推断方法。
 
 一般地，我们讨论的数据集通常取值为实数，为了刻画数据的分布或者相似程度，我们需要引入度量，所以我们一般在度量空间中讨论问题，如果该度量存在对应的范数，该度量空间便成为一个（实）赋范空间。
 
