@@ -12,7 +12,7 @@ tags: [first blog]
 
 🔍 **关键词：**
 * 统计 / 数学 / 人工智能 /
-* C / Python / MATLAB / Mathematica / LaTeX / HTML
+* C / Python / MATLAB / Mathematica / LaTeX / HTML / Lean /
 
 
 
