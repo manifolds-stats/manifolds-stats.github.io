@@ -58,4 +58,4 @@ image:
 * Mathematics For Machine Learning
 
 **许可协议**
-![alt text](../assets/ccbyncnd.jpg)
+![alt text](../assets/ccbyncnd.png)
