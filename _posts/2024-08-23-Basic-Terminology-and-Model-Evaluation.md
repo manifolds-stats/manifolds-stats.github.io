@@ -88,3 +88,6 @@ $$
 
 * Mathematics For Machine Learning
 * 机器学习 周志华
+
+**许可协议**
+![alt text](../assets/ccbyncnd.jpg)
